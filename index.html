@@ -78,65 +78,77 @@
   </div>
 
   <header class="site-header" id="siteHeader">
-    <div class="header-main">
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-      
-      <!-- Authentic Recreated Vector Emblem System Matching business card.jpg -->
-      <a href="#home" class="brand" aria-label="Heritage Wallpaper and Carpet home">
-        <div class="card-identity-container">
-          <!-- Monogram Ring Module -->
-          <div class="card-logo-graphic">
-            <svg viewBox="0 0 100 100" class="logo-circle-svg">
-              <circle cx="50" cy="50" r="44" stroke="currentColor" stroke-width="2.5" fill="none" />
-              <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="2,2" />
-              <text x="50" y="58" font-family="'Cinzel', serif" font-size="25" font-weight="800" text-anchor="middle" fill="currentColor">HW</text>
-            </svg>
+    <div class="header-container-block">
+      <div class="header-main">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        
+        <!-- Exact Centered Layout from Business Card Image Asset -->
+        <a href="#home" class="brand" aria-label="Heritage Wallpaper and Carpet home">
+          <div class="card-identity-stack">
+            
+            <!-- Top Row: Centered Monogram Circle with Left & Right Filigree Wings -->
+            <div class="card-top-row">
+              <div class="filigree-side-wing left-wing">
+                <span>🍃 Line</span>
+              </div>
+              <div class="card-logo-graphic-center">
+                <svg viewBox="0 0 100 100" class="logo-circle-svg-core">
+                  <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" fill="none" />
+                  <circle cx="50" cy="50" r="39" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3,2" />
+                  <text x="50" y="59" font-family="'Cinzel', serif" font-size="24" font-weight="800" text-anchor="middle" fill="currentColor">HW</text>
+                </svg>
+              </div>
+              <div class="filigree-side-wing right-wing">
+                <span>Line 🍃</span>
+              </div>
+            </div>
+            
+            <!-- Bottom Stack: High Contrast Brand Block -->
+            <div class="card-bottom-text-stack">
+              <h1 class="brand-title-centered">
+                <span class="orange-char">H</span>ER<span class="orange-char">I</span>TAG<span class="orange-char">E</span>
+              </h1>
+              <div class="brand-subtitle-centered">WALLPAPER & CARPET</div>
+              <div class="filigree-bottom-scroll">
+                <svg viewBox="0 0 200 20" class="scroll-flourish-svg">
+                  <path d="M10,8 Q50,18 100,8 Q150,18 190,8 M40,8 Q100,1 160,8" stroke="currentColor" stroke-width="1.2" fill="none" />
+                  <circle cx="100" cy="8" r="3" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+
           </div>
-          
-          <!-- Text and Ornate Filigree Accent Lines -->
-          <div class="card-logo-text">
-            <div class="filigree-wing top">
-              <span class="center-diamond">♦</span>
-            </div>
-            <h1 class="brand-title">
-              <span class="orange-char">H</span>ER<span class="orange-char">I</span>TAG<span class="orange-char">E</span>
-            </h1>
-            <div class="brand-subtitle">WALLPAPER & CARPET</div>
-            <div class="filigree-wing bottom">
-              <svg viewBox="0 0 120 15" class="filigree-scroll-svg">
-                <path d="M10,5 Q30,0 60,7 Q90,0 110,5 M30,5 Q60,12 90,5" stroke="currentColor" stroke-width="1" fill="none" />
-                <circle cx="60" cy="6" r="2" fill="currentColor" />
-              </svg>
-            </div>
+        </a>
+
+        <div class="header-actions-wrapper">
+          <form class="search" id="searchForm">
+            <input id="searchInput" type="search" placeholder="Search wallpaper, carpets, colors..." />
+            <button type="submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm0-2a5.3 5.3 0 1 0 0-10.6 5.3 5.3 0 0 0 0 10.6Zm5.3.4 4.1 4.1-1.5 1.4-4-4.1 1.4-1.4Z"/></svg>
+            </button>
+          </form>
+          <div class="header-buttons-group">
+            <a href="tel:+917977576575" class="header-link">Call Shop</a>
+            <button class="basket-btn" id="basketBtn" type="button">
+              Cart <span id="cartCount">0</span>
+            </button>
           </div>
         </div>
-      </a>
-
-      <form class="search" id="searchForm">
-        <input id="searchInput" type="search" placeholder="Search wallpaper, carpets, colors, rooms..." />
-        <button type="submit" aria-label="Search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm0-2a5.3 5.3 0 1 0 0-10.6 5.3 5.3 0 0 0 0 10.6Zm5.3.4 4.1 4.1-1.5 1.4-4-4.1 1.4-1.4Z"/></svg>
-        </button>
-      </form>
-      <div class="header-actions">
-        <a href="tel:+917977576575" class="header-link">Call Shop</a>
-        <button class="basket-btn" id="basketBtn" type="button">
-          Cart <span id="cartCount">0</span>
-        </button>
       </div>
+      
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#shop">Wallpapers</a>
+        <a href="#shop" data-nav-filter="carpet">Carpets</a>
+        <a href="#shop" data-nav-filter="flooring">Wooden Flooring</a>
+        <a href="#brands">Collections</a>
+        <a href="#samples">Order Samples</a>
+        <a href="#gallery">Our Work Gallery</a>
+        <a href="#checkoutGuide">How to Pay</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
     </div>
-    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-      <a href="#shop">Wallpapers</a>
-      <a href="#shop" data-nav-filter="carpet">Carpets</a>
-      <a href="#shop" data-nav-filter="flooring">Wooden Flooring</a>
-      <a href="#brands">Collections</a>
-      <a href="#samples">Order Samples</a>
-      <a href="#gallery">Our Work Gallery</a>
-      <a href="#checkoutGuide">How to Pay</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
   </header>
 
   <main id="home">
@@ -366,17 +378,19 @@
     <div class="footer-grid">
       <div>
         <div class="logo-wrapper inverted">
-          <div class="card-identity-container">
-            <div class="card-logo-graphic">
-              <svg viewBox="0 0 100 100" class="logo-circle-svg">
-                <circle cx="50" cy="50" r="44" stroke="currentColor" stroke-width="2.5" fill="none" />
-                <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="2,2" />
-                <text x="50" y="58" font-family="'Cinzel', serif" font-size="25" font-weight="800" text-anchor="middle" fill="currentColor">HW</text>
-              </svg>
+          <div class="card-identity-stack">
+            <div class="card-top-row">
+              <div class="card-logo-graphic-center" style="color: var(--card-bg-cream);">
+                <svg viewBox="0 0 100 100" class="logo-circle-svg-core">
+                  <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3" fill="none" />
+                  <circle cx="50" cy="50" r="39" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3,2" />
+                  <text x="50" y="59" font-family="'Cinzel', serif" font-size="24" font-weight="800" text-anchor="middle" fill="currentColor">HW</text>
+                </svg>
+              </div>
             </div>
-            <div class="card-logo-text">
-              <h1 class="brand-title" style="font-size:22px; color: #fff;"><span style="color:#d95d2b;">H</span>ER<span style="color:#d95d2b;">I</span>TAG<span style="color:#d95d2b;">E</span></h1>
-              <div class="brand-subtitle" style="color:#fdfbf7;">WALLPAPER & CARPET</div>
+            <div class="card-bottom-text-stack">
+              <h1 class="brand-title-centered" style="font-size:22px; color: #fff;"><span style="color:#d95d2b;">H</span>ER<span style="color:#d95d2b;">I</span>TAG<span style="color:#d95d2b;">E</span></h1>
+              <div class="brand-subtitle-centered" style="color:#fdfbf7;">WALLPAPER & CARPET</div>
             </div>
           </div>
         </div>

@@ -51,98 +51,121 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(252, 251, 250, 0.96);
+  background: rgba(252, 251, 250, 0.98);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(20px);
 }
-.header-main {
+.header-container-block {
   max-width: 1400px;
-  min-height: 90px;
   margin: 0 auto;
-  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Complete Structural Realignment: Centered Logo Configuration from Card Asset */
+.header-main {
+  padding: 16px 24px 8px;
   display: grid;
-  grid-template-columns: auto minmax(360px, 420px) minmax(240px, 1fr) auto;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 24px;
 }
-
-/* Exact Structural Representation of the Brand Logo Section from the Business Card */
-.card-identity-container {
+.brand {
+  grid-column: 2;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 16px;
+}
+.card-identity-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   user-select: none;
 }
-.card-logo-graphic {
-  width: 64px;
-  height: 64px;
+
+/* Top Row Styles: Left Wing, Centered Circle, Right Wing */
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+.card-logo-graphic-center {
+  width: 68px;
+  height: 68px;
   color: var(--card-dark-maroon);
   flex-shrink: 0;
 }
-.logo-circle-svg {
+.logo-circle-svg-core {
   width: 100%;
   height: 100%;
 }
-.card-logo-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.filigree-wing {
+.filigree-side-wing {
   color: var(--card-copper-gold);
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
-.filigree-wing.top::before, .filigree-wing.top::after {
+.filigree-side-wing::before, .filigree-side-wing::after {
   content: "";
   height: 1px;
-  width: 40px;
+  width: 50px;
   background: currentColor;
-  margin: 0 8px;
   display: inline-block;
 }
-.filigree-scroll-svg {
-  width: 130px;
-  height: 15px;
-  color: var(--card-copper-gold);
+.left-wing::before { margin-right: 8px; }
+.left-wing::after { margin-left: 8px; }
+.right-wing::before { margin-right: 8px; }
+.right-wing::after { margin-left: 8px; }
+
+/* Bottom Stack Styles: Stacking Brand Names and Flourish Graphics */
+.card-bottom-text-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+  width: 100%;
 }
-.brand-title {
+.brand-title-centered {
   font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 700;
   color: var(--card-dark-maroon);
-  margin: 2px 0;
+  margin: 0;
   padding: 0;
-  line-height: 1;
-  letter-spacing: 2px;
+  line-height: 1.1;
+  letter-spacing: 3px;
 }
-.brand-title .orange-char {
+.brand-title-centered .orange-char {
   color: var(--card-metallic-orange);
 }
-.brand-subtitle {
+.brand-subtitle-centered {
   font-family: var(--font-sans);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   color: var(--card-dark-maroon);
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   line-height: 1;
-  margin-top: 1px;
+  margin-top: 2px;
+}
+.filigree-bottom-scroll {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+}
+.scroll-flourish-svg {
+  width: 180px;
+  height: 20px;
+  color: var(--card-copper-gold);
 }
 
-/* Footer Colors for the Inverted Layout */
-.logo-wrapper.inverted .card-logo-graphic {
-  color: var(--card-bg-cream);
-}
-.logo-wrapper.inverted .brand-title {
-  color: var(--white) !important;
-}
-
+/* Action Bars Restructuring around Centered Identity */
 .menu-btn {
+  grid-column: 1;
+  justify-self: start;
   display: none;
   flex-direction: column;
   gap: 5px;
@@ -153,18 +176,13 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   display: block;
   background: currentColor;
 }
-.icon-btn {
-  width: 44px;
-  height: 44px;
-  display: inline-grid;
-  place-items: center;
-  color: var(--ink);
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 50%;
+.header-actions-wrapper {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
 }
-.icon-btn.menu-btn { display: none; }
-
 .search {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -173,18 +191,19 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;
+  width: 260px;
 }
 .search input {
   min-width: 0;
-  padding: 14px 18px;
+  padding: 10px 14px;
   background: transparent;
   border: 0;
   outline: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .search button {
-  height: 48px;
-  width: 56px;
+  height: 38px;
+  width: 44px;
   display: grid;
   place-items: center;
   color: var(--white);
@@ -193,10 +212,10 @@ svg { width: 18px; height: 18px; fill: currentColor; }
 }
 .search button:hover { background: var(--card-metallic-orange); }
 
-.header-actions {
+.header-buttons-group {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 .header-link {
   color: var(--card-dark-maroon);
@@ -209,19 +228,18 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 20px;
+  padding: 10px 16px;
   color: var(--white);
   background: var(--ink);
   border: 0;
   border-radius: 6px;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 .basket-btn span {
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 22px;
+  min-height: 22px;
   display: grid;
   place-items: center;
   color: var(--white);
@@ -230,10 +248,19 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   font-size: 11px;
 }
 
+.icon-btn {
+  width: 44px;
+  height: 44px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
 .main-nav {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 8px 24px 16px;
+  padding: 12px 24px 16px;
   display: flex;
   justify-content: center;
   gap: 36px;
@@ -242,14 +269,17 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  margin-top: 8px;
 }
 .main-nav a:hover { color: var(--card-metallic-orange); }
 
+/* Editorial Page Content Modules */
 .hero {
   max-width: 1400px;
   min-height: 680px;
   margin: 0 auto;
-  padding: 80px 24px 60px;
+  padding: 60px 24px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(460px, 1.1fr);
   gap: 60px;
@@ -493,17 +523,6 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 4px;
 }
-
-.pattern-botanical { background: linear-gradient(145deg, #1f3627, #3b5c43, #728c69); }
-.pattern-geo { background: conic-gradient(from 45deg, #1b262c 0 25%, var(--card-copper-gold) 0 50%, #2e4e5c 0 75%, #f2eae1 0); background-size: 60px 60px; }
-.pattern-floral { background: linear-gradient(135deg, #612d38, #995260, #d99691); }
-.pattern-stripe { background: repeating-linear-gradient(90deg, #f7f3eb 0 20px, var(--card-copper-gold) 20px 22px, #ebdcc1 22px 40px); }
-.pattern-kids { background: radial-gradient(circle, #fff 0 6px, transparent 7px), linear-gradient(145deg, #5b8da8, #dba061); background-size: 40px 40px, cover; }
-.pattern-linen { background: repeating-linear-gradient(0deg, rgba(0,0,0,0.04) 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, rgba(0,0,0,0.04) 0 1px, transparent 1px 5px), #cfc0a3; }
-.pattern-carpet { background: repeating-linear-gradient(45deg, #212923 0 10px, #3c4f3f 10px 20px); }
-.pattern-grass { background: linear-gradient(180deg, #233b25, #4e6e3d); }
-.pattern-floor { background: repeating-linear-gradient(90deg, #6e4827 0 30px, #9c6c3f 30px 60px); }
-.pattern-panel { background: linear-gradient(90deg, transparent 0 30%, rgba(255,255,255,0.15) 30% 32%, transparent 32%), #2a2e33; }
 
 .product-body {
   padding: 24px;
@@ -808,14 +827,22 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   color: rgba(253, 251, 247, 0.4);
 }
 
-/* Responsiveness Systems */
+/* Updated Responsive Rules for Centered Stack Navigation */
 @media (max-width: 1250px) {
   .header-main {
     grid-template-columns: auto 1fr auto;
     padding: 12px 16px;
   }
+  .brand {
+    grid-column: 2;
+  }
+  .header-actions-wrapper {
+    grid-column: 3;
+  }
+  .search {
+    display: none; /* Hide search input on mid-screens to prevent overlap */
+  }
   .icon-btn.menu-btn { display: inline-flex; }
-  .search { grid-column: 1 / -1; grid-row: 2; }
   .main-nav {
     display: none;
     flex-direction: column;
@@ -835,14 +862,14 @@ svg { width: 18px; height: 18px; fill: currentColor; }
 
 @media (max-width: 768px) {
   .topbar { flex-direction: column; gap: 6px; font-size: 11px; }
-  .header-main { gap: 14px; }
-  .header-actions .header-link { display: none; }
-  .card-identity-container { gap: 10px; }
-  .card-logo-graphic { width: 48px; height: 48px; }
-  .brand-title { font-size: 20px; }
-  .brand-subtitle { font-size: 8px; letter-spacing: 2px; }
-  .filigree-wing.top::before, .filigree-wing.top::after { width: 20px; }
-  .filigree-scroll-svg { width: 90px; }
+  .header-main { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .header-actions-wrapper { width: 100%; justify-content: center; }
+  .card-top-row { gap: 8px; }
+  .card-logo-graphic-center { width: 52px; height: 52px; }
+  .filigree-side-wing::before, .filigree-side-wing::after { width: 25px; }
+  .brand-title-centered { font-size: 24px; }
+  .brand-subtitle-centered { font-size: 9px; letter-spacing: 2px; }
+  .scroll-flourish-svg { width: 130px; }
   .hero { padding-top: 40px; }
   .hero-studio { min-height: 440px; grid-template-columns: repeat(3, 140px); overflow-x: auto; }
   .roll { min-height: 340px; }
