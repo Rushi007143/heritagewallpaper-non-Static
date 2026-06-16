@@ -1,5 +1,5 @@
 const phoneNumber = "917977576575";
-const upiId = "yourbusiness@upi"; // IMPORTANT: Replace this with your actual UPI ID
+const upiId = "rushikeshthul007-1@okaxis";
 const payeeName = "Heritage Wallpaper and Carpet";
 const cart = [];
 
@@ -279,8 +279,18 @@ function renderCart() {
   if (upiPayBtn) {
     if (cart.length > 0) {
       upiPayBtn.style.display = "block";
-      upiPayBtn.href = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${cartSum().toFixed(2)}&cu=INR`;
-      upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (GPay, PhonePe, Paytm)`;
+      const upiString = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${cartSum().toFixed(2)}&cu=INR`;
+      
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile) {
+        upiPayBtn.href = upiString;
+        upiPayBtn.removeAttribute("target");
+        upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (GPay, PhonePe, Paytm)`;
+      } else {
+        upiPayBtn.href = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiString)}`;
+        upiPayBtn.target = "_blank";
+        upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (Scan QR Code)`;
+      }
     } else {
       upiPayBtn.style.display = "none";
     }
@@ -402,6 +412,13 @@ document.getElementById("checkoutForm").addEventListener("submit", (event) => {
     "Please confirm stock and send the secure payment link."
   ].join("%0A");
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank", "noopener");
+});
+
+document.getElementById("upiPayBtn").addEventListener("click", (event) => {
+  if (upiId === "yourbusiness@upi" || upiId.trim() === "") {
+    event.preventDefault();
+    alert("Payment Setup Required: Please open script.js and replace 'yourbusiness@upi' on line 2 with your actual bank UPI ID (e.g., 917977576575@paytm).");
+  }
 });
 
 renderProducts();

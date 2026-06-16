@@ -24,7 +24,7 @@ Upload all 3 files to your web hosting (Hostinger, Bluehost, GoDaddy, etc.) into
 - [ ] Update business hours if different
 - [x] Add Instagram link in footer social icons
 - [ ] Add Facebook link in footer social icons
-- [ ] Replace placeholder `upiId` in `script.js` with your actual UPI ID (for GPay/PhonePe payments)
+- [x] Replace placeholder `upiId` in `script.js` with your actual UPI ID (for GPay/PhonePe payments)
 - [ ] Set up Google Analytics (add GA4 tag to `<head>`)
 - [ ] Set up Google Search Console and submit sitemap
 
