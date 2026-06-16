@@ -1,5 +1,5 @@
 :root {
-  /* Brand Theme Colors from Card Graphic Asset */
+  /* Dynamic Premium Theme extracted from business card.jpg */
   --card-bg-cream: #fdfbf7;
   --card-dark-maroon: #3c0c14; 
   --card-copper-gold: #c47b41;  
@@ -61,72 +61,85 @@ svg { width: 18px; height: 18px; fill: currentColor; }
   margin: 0 auto;
   padding: 12px 24px;
   display: grid;
-  grid-template-columns: auto minmax(280px, 340px) minmax(280px, 1fr) auto;
+  grid-template-columns: auto minmax(360px, 420px) minmax(240px, 1fr) auto;
   align-items: center;
   gap: 24px;
 }
 
-/* Structural CSS Representation of Business Card Logo Block */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  min-width: 0;
-}
-.logo-wrapper {
+/* Exact Structural Representation of the Brand Logo Section from the Business Card */
+.card-identity-container {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  user-select: none;
 }
-.card-monogram {
-  width: 52px;
-  height: 52px;
-  display: grid;
-  place-items: center;
-  background: transparent;
+.card-logo-graphic {
+  width: 64px;
+  height: 64px;
   color: var(--card-dark-maroon);
-  border: 3px double var(--card-copper-gold);
-  border-radius: 50%;
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 800;
-  position: relative;
-  box-shadow: 0 0 0 2px var(--card-dark-maroon);
+  flex-shrink: 0;
 }
-.logo-text-block {
+.logo-circle-svg {
+  width: 100%;
+  height: 100%;
+}
+.card-logo-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-.logo-text-block .main-title {
-  font-family: var(--font-serif);
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--card-dark-maroon);
+.filigree-wing {
+  color: var(--card-copper-gold);
+  font-size: 11px;
   line-height: 1;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo-text-block .main-title .highlight {
+.filigree-wing.top::before, .filigree-wing.top::after {
+  content: "";
+  height: 1px;
+  width: 40px;
+  background: currentColor;
+  margin: 0 8px;
+  display: inline-block;
+}
+.filigree-scroll-svg {
+  width: 130px;
+  height: 15px;
+  color: var(--card-copper-gold);
+}
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--card-dark-maroon);
+  margin: 2px 0;
+  padding: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.brand-title .orange-char {
   color: var(--card-metallic-orange);
 }
-.logo-text-block .sub-title {
+.brand-subtitle {
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 0.16em;
-  margin-top: 4px;
-  border-top: 1px solid var(--line);
-  padding-top: 3px;
+  color: var(--card-dark-maroon);
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-top: 1px;
 }
 
-.logo-wrapper.inverted .card-monogram {
+/* Footer Colors for the Inverted Layout */
+.logo-wrapper.inverted .card-logo-graphic {
   color: var(--card-bg-cream);
-  border-color: var(--card-copper-gold);
-  box-shadow: 0 0 0 2px var(--card-bg-cream);
 }
-.logo-wrapper.inverted .main-title { color: var(--white); }
-.logo-wrapper.inverted .sub-title {
-  color: var(--card-bg-cream);
-  border-top-color: rgba(255,255,255,0.2);
+.logo-wrapper.inverted .brand-title {
+  color: var(--white) !important;
 }
 
 .menu-btn {
@@ -796,8 +809,11 @@ svg { width: 18px; height: 18px; fill: currentColor; }
 }
 
 /* Responsiveness Systems */
-@media (max-width: 1150px) {
-  .header-main { grid-template-columns: auto 1fr auto; }
+@media (max-width: 1250px) {
+  .header-main {
+    grid-template-columns: auto 1fr auto;
+    padding: 12px 16px;
+  }
   .icon-btn.menu-btn { display: inline-flex; }
   .search { grid-column: 1 / -1; grid-row: 2; }
   .main-nav {
@@ -819,9 +835,14 @@ svg { width: 18px; height: 18px; fill: currentColor; }
 
 @media (max-width: 768px) {
   .topbar { flex-direction: column; gap: 6px; font-size: 11px; }
-  .header-main { padding: 12px 16px; gap: 14px; }
+  .header-main { gap: 14px; }
   .header-actions .header-link { display: none; }
-  .logo-text-block .main-title { font-size: 20px; }
+  .card-identity-container { gap: 10px; }
+  .card-logo-graphic { width: 48px; height: 48px; }
+  .brand-title { font-size: 20px; }
+  .brand-subtitle { font-size: 8px; letter-spacing: 2px; }
+  .filigree-wing.top::before, .filigree-wing.top::after { width: 20px; }
+  .filigree-scroll-svg { width: 90px; }
   .hero { padding-top: 40px; }
   .hero-studio { min-height: 440px; grid-template-columns: repeat(3, 140px); overflow-x: auto; }
   .roll { min-height: 340px; }
