@@ -6,7 +6,7 @@ const cart = [];
 const products = [
   {
     id: "fiore-garden",
-    name: "Fiore Garden Wallpaper",
+    name: "Fiore Premium Garden Roll",
     finish: "Botanical",
     category: "wallpaper",
     rooms: ["living", "bedroom"],
@@ -15,12 +15,12 @@ const products = [
     unit: "per roll",
     sample: 99,
     art: "pattern-botanical",
-    description: "Leafy botanical print for warm living rooms and feature walls.",
-    badge: "Offer"
+    description: "Deep luxury leafy botanical print ideal for majestic living rooms and feature statement partitions.",
+    badge: "Exclusive Design"
   },
   {
     id: "cronno-stripe",
-    name: "Cronno Stripe Wallpaper",
+    name: "Cronno Architectural Stripe",
     finish: "Stripe",
     category: "wallpaper",
     rooms: ["living", "office"],
@@ -28,12 +28,12 @@ const products = [
     unit: "per roll",
     sample: 99,
     art: "pattern-stripe",
-    description: "Smart vertical stripes that make compact rooms feel taller.",
-    badge: "Best seller"
+    description: "Symmetric vertical linear distributions that elegantly heighten compact structural ceilings.",
+    badge: "Atelier Curated"
   },
   {
     id: "labyrinth-geo",
-    name: "Labyrinth Geometric Wallpaper",
+    name: "Labyrinth Luxury Geometric",
     finish: "Geometric",
     category: "wallpaper",
     rooms: ["living", "office"],
@@ -42,12 +42,12 @@ const products = [
     unit: "per roll",
     sample: 149,
     art: "pattern-geo",
-    description: "Bold geometric pattern with deep blue and brass accents.",
-    badge: "New"
+    description: "Bold complex structural vector patterns accented with deep navy blues and brass metallic foils.",
+    badge: "Premium Series"
   },
   {
     id: "wisteria-rose",
-    name: "Wisteria Rose Wallpaper",
+    name: "Wisteria Silk Floral Relief",
     finish: "Floral",
     category: "wallpaper",
     rooms: ["bedroom"],
@@ -55,12 +55,12 @@ const products = [
     unit: "per roll",
     sample: 99,
     art: "pattern-floral",
-    description: "Soft floral repeat for calm bedrooms and dressing areas.",
-    badge: "Sample ready"
+    description: "Soft textural blossom patterns optimized for master bedrooms and intimate private styling lounges.",
+    badge: "Swatches Ready"
   },
   {
     id: "mini-modern-kids",
-    name: "Mini Modern Kids Wallpaper",
+    name: "Mini Modernist Junior Wallpaper",
     finish: "Kids",
     category: "wallpaper",
     rooms: ["kids"],
@@ -68,12 +68,12 @@ const products = [
     unit: "per roll",
     sample: 99,
     art: "pattern-kids",
-    description: "Playful dotted colour story for kids rooms and nurseries.",
-    badge: "Kids"
+    description: "Sophisticated play colors for designer nurseries and premium activity child hubs.",
+    badge: "Designer Play"
   },
   {
     id: "linen-texture",
-    name: "Linen Texture Vinyl Wallpaper",
+    name: "Heavy Linen Grain Vinyl Core",
     finish: "Textured",
     category: "wallpaper",
     rooms: ["living", "bedroom", "hotel"],
@@ -81,12 +81,12 @@ const products = [
     unit: "per roll",
     sample: 149,
     art: "pattern-linen",
-    description: "Washable textured vinyl with a quiet woven finish.",
-    badge: "Washable"
+    description: "Thick fully-washable structural texturized wall material mimicking elite looms.",
+    badge: "High Durability"
   },
   {
     id: "heritage-carpet-tile",
-    name: "Heritage Contract Carpet Tile",
+    name: "Heritage Structural Contract Tile",
     finish: "Commercial",
     category: "carpet",
     rooms: ["office", "hotel"],
@@ -94,12 +94,12 @@ const products = [
     unit: "per sq ft",
     sample: 120,
     art: "pattern-carpet",
-    description: "Durable carpet tile for offices, hotels and corridors.",
-    badge: "Contract"
+    description: "Ultra heavy-duty acoustic carpet squares for corporate executive office layouts and suites.",
+    badge: "Heavy Traffic"
   },
   {
     id: "balcony-grass",
-    name: "Balcony Artificial Grass",
+    name: "Bespoke Premium Artificial Turf",
     finish: "Outdoor",
     category: "carpet",
     rooms: ["living"],
@@ -108,12 +108,12 @@ const products = [
     unit: "per sq ft",
     sample: 99,
     art: "pattern-grass",
-    description: "Low-maintenance turf for balconies, terraces and displays.",
-    badge: "Offer"
+    description: "Dense, low-maintenance premium structural outdoor grass carpets for elevated balconies and open terraces.",
+    badge: "Premium Grade"
   },
   {
     id: "oak-vinyl-floor",
-    name: "Warm Oak Vinyl Flooring",
+    name: "Engineered Warm Oak Rigid Plank",
     finish: "Wood look",
     category: "flooring",
     rooms: ["living", "bedroom", "office"],
@@ -121,12 +121,12 @@ const products = [
     unit: "per sq ft",
     sample: 120,
     art: "pattern-floor",
-    description: "Water-resistant wood look vinyl flooring for daily use.",
-    badge: "Waterproof"
+    description: "Completely moisture-isolated luxury vinyl plank wear-surface with rich variable wood knots.",
+    badge: "Impervious Core"
   },
   {
     id: "fluted-wall-panel",
-    name: "Fluted Charcoal Wall Panel",
+    name: "Fluted Charcoal Architectural Slats",
     finish: "Panel",
     category: "panel",
     rooms: ["living", "office", "hotel"],
@@ -134,12 +134,12 @@ const products = [
     unit: "per sq ft",
     sample: 150,
     art: "pattern-panel",
-    description: "Modern fluted panel for TV walls, counters and offices.",
-    badge: "Premium"
+    description: "Deep relief horizontal and vertical fluted profiles for TV framing backdrops and primary counters.",
+    badge: "Elite Accent"
   },
   {
     id: "hotel-corridor-carpet",
-    name: "Hotel Corridor Carpet",
+    name: "Luxury Hospitality Broadloom Carpet",
     finish: "Commercial",
     category: "carpet",
     rooms: ["hotel"],
@@ -147,12 +147,12 @@ const products = [
     unit: "per sq ft",
     sample: 120,
     art: "pattern-carpet",
-    description: "Dense pile carpet for lobbies, corridors and banquet spaces.",
-    badge: "Hotel"
+    description: "High pile plush structural running carpet sets engineered for hotel lobbies and elegant wedding spaces.",
+    badge: "Hospitality Elite"
   },
   {
     id: "metallic-luxe",
-    name: "Metallic Luxe Wallpaper",
+    name: "Bespoke Foil Metallic Luxury Roll",
     finish: "Luxury",
     category: "wallpaper",
     rooms: ["living", "hotel"],
@@ -161,8 +161,8 @@ const products = [
     unit: "per roll",
     sample: 199,
     art: "pattern-geo",
-    description: "Luxury metallic pattern for premium homes and showrooms.",
-    badge: "Luxury"
+    description: "High-reflection genuine foil patterns reserved for ultra high-end homes and flagship storefront showcases.",
+    badge: "Atelier Limited"
   }
 ];
 
@@ -200,13 +200,13 @@ function getVisibleProducts() {
 
 function renderProducts() {
   const visible = getVisibleProducts();
-  resultCount.textContent = `${visible.length} product${visible.length === 1 ? "" : "s"} shown`;
+  resultCount.textContent = `${visible.length} Choice Variant${visible.length === 1 ? "" : "s"} Displayed`;
   productGrid.innerHTML = visible.map((product) => `
     <article class="product-card">
       <div class="product-art ${product.art}" aria-hidden="true"></div>
       <div class="product-body">
         <div class="product-meta">
-          <span>${product.finish}</span>
+          <span>${product.finish} Line</span>
           <span>${product.badge}</span>
         </div>
         <h3>${product.name}</h3>
@@ -219,8 +219,8 @@ function renderProducts() {
           <span class="unit">${product.unit}</span>
         </div>
         <div class="product-actions">
-          <button class="add-roll" type="button" data-add="${product.id}">Add to basket</button>
-          <button class="add-sample" type="button" data-sample="${product.id}">Sample ${formatMoney(product.sample)}</button>
+          <button class="add-roll" type="button" data-add="${product.id}">Select Lot</button>
+          <button class="add-sample" type="button" data-sample="${product.id}">Swatch ${formatMoney(product.sample)}</button>
         </div>
       </div>
     </article>
@@ -238,9 +238,9 @@ function addToCart(productId, sample = false) {
     cart.push({
       key,
       id: product.id,
-      name: sample ? `${product.name} Sample` : product.name,
+      name: sample ? `${product.name} Sample Swatch` : product.name,
       price: sample ? product.sample : product.price,
-      unit: sample ? "sample" : product.unit,
+      unit: sample ? "sample unit" : product.unit,
       qty: 1
     });
   }
@@ -266,14 +266,15 @@ function renderCart() {
     <div class="cart-item">
       <div>
         <strong>${item.name}</strong>
-        <small>${item.qty} x ${formatMoney(item.price)} ${item.unit}</small>
+        <small>${item.qty} × ${formatMoney(item.price)} [${item.unit}]</small>
       </div>
-      <button type="button" aria-label="Remove ${item.name}" data-remove="${item.key}">x</button>
+      <button type="button" aria-label="Remove ${item.name}" data-remove="${item.key}">×</button>
     </div>
   `).join("");
+  
   checkoutSummary.innerHTML = cart.length
-    ? cart.map((item) => `${item.qty} x ${item.name} - ${formatMoney(item.price * item.qty)}`).join("<br>") + `<br><strong>Total: ${formatMoney(cartSum())}</strong>`
-    : "No products selected.";
+    ? cart.map((item) => `⚜️ ${item.qty} × ${item.name} - ${formatMoney(item.price * item.qty)}`).join("<br>") + `<br><br><strong>Estimated Vault Total: ${formatMoney(cartSum())}</strong>`
+    : "No premium materials selected.";
 
   const upiPayBtn = document.getElementById("upiPayBtn");
   if (upiPayBtn) {
@@ -285,11 +286,11 @@ function renderCart() {
       if (isMobile) {
         upiPayBtn.href = upiString;
         upiPayBtn.removeAttribute("target");
-        upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (GPay, PhonePe, Paytm)`;
+        upiPayBtn.textContent = `Authorize ${formatMoney(cartSum())} via Local UPI App`;
       } else {
         upiPayBtn.href = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(upiString)}`;
         upiPayBtn.target = "_blank";
-        upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (Scan QR Code)`;
+        upiPayBtn.textContent = `Generate Secure Vault QR Payment`;
       }
     } else {
       upiPayBtn.style.display = "none";
@@ -395,30 +396,23 @@ document.getElementById("checkoutForm").addEventListener("submit", (event) => {
   const phone = document.getElementById("customerPhone").value.trim();
   const area = document.getElementById("customerArea").value.trim();
   const payment = document.getElementById("paymentMethod").value;
-  const items = cart.map((item) => `- ${item.qty} x ${item.name} (${formatMoney(item.price * item.qty)})`).join("%0A");
+  const items = cart.map((item) => `⚜️ ${item.qty} x ${item.name} (${formatMoney(item.price * item.qty)})`).join("%0A");
   const message = [
-    "*New Heritage Website Order*",
+    "*NEW HERITAGE ATELIER PROCUREMENT REQUEST*",
     "",
-    `Name: ${name}`,
-    `Phone: ${phone}`,
-    `Area: ${area}`,
-    `Payment: ${payment}`,
+    `Client Name: ${name}`,
+    `Secure Contact: ${phone}`,
+    `Target Deployment Zone: ${area}`,
+    `Selected Settlement Protocol: ${payment}`,
     "",
-    "Items:",
+    "Selected Materials Dossier:",
     items,
     "",
-    `Estimated total: ${formatMoney(cartSum())}`,
+    `Estimated Value Sum: ${formatMoney(cartSum())}`,
     "",
-    "Please confirm stock and send the secure payment link."
+    "Please verify physical inventory configurations and return verification invoice tokens."
   ].join("%0A");
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank", "noopener");
-});
-
-document.getElementById("upiPayBtn").addEventListener("click", (event) => {
-  if (upiId === "yourbusiness@upi" || upiId.trim() === "") {
-    event.preventDefault();
-    alert("Payment Setup Required: Please open script.js and replace 'yourbusiness@upi' on line 2 with your actual bank UPI ID (e.g., 917977576575@paytm).");
-  }
 });
 
 renderProducts();

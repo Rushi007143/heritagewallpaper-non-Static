@@ -3,58 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heritage Wallpaper & Carpet | Wallpaper, Samples, Carpets & Flooring</title>
-  <meta name="description" content="Shop wallpapers, samples, carpets, wall panels and flooring from Heritage Wallpaper & Carpet in Ulhasnagar. Browse prices, add to cart and request a secure payment link." />
+  <title>Heritage Wallpaper & Carpet | Luxury Wallcoverings & Flooring</title>
+  <meta name="description" content="Shop wallpapers, samples, carpets, wall panels and flooring from Heritage Wallpaper & Carpet in Ulhasnagar. Browse premium designs, add to cart and request a secure payment link." />
   <meta name="keywords" content="wallpaper shop ulhasnagar, wallpaper online mumbai, carpet shop ulhasnagar, wallpaper samples, wallpaper installation, flooring mumbai" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://heritagewallpaper.in/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Premium Theme & Logo Overrides */
-    .brand-mark {
-      background-color: #1a1a1a !important;
-      color: #d4af37 !important; /* Premium Gold */
-      border: 2px solid #d4af37 !important;
-      border-radius: 4px;
-      padding: 2px 10px;
-      font-family: 'Libre Baskerville', serif;
-      font-size: 1.4rem;
-    }
+    /* Premium Brand Overrides */
     .hero-copy h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);
-      color: #1a1a1a;
+      color: var(--card-dark-maroon);
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
-    /* Gallery Section Styles */
     .gallery {
       padding: 4rem 2rem;
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
     }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
     }
     .gallery-item {
-      border-radius: 8px;
+      border-radius: var(--radius);
       overflow: hidden;
       aspect-ratio: 1 / 1;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
     }
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .gallery-item:hover img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
   </style>
   <script type="application/ld+json">
@@ -62,7 +53,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Heritage Wallpaper & Carpet",
-    "description": "Wallpaper, carpet, flooring and wall panel showroom with measurement, installation and online order support.",
+    "description": "Premium wallpaper, carpet, flooring and wall panel showroom with measurement, installation and online order support.",
     "telephone": "+917977576575",
     "address": {
       "@type": "PostalAddress",
@@ -79,9 +70,9 @@
 </head>
 <body>
   <div class="topbar">
-    <span>Free Ulhasnagar store pickup</span>
+    <span>✨ Premium Interior Collections</span>
+    <span>Free Ulhasnagar Store Pickup</span>
     <span>Samples from Rs 99</span>
-    <span>Secure payment link available</span>
   </div>
 
   <header class="site-header" id="siteHeader">
@@ -89,33 +80,37 @@
       <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
+      
       <a href="#home" class="brand" aria-label="Heritage Wallpaper and Carpet home">
-        <span class="brand-mark">H</span>
-        <span>
-          <strong>Heritage</strong>
-          <small>Wallpaper & Carpet</small>
-        </span>
+        <div class="logo-wrapper">
+          <div class="card-monogram">HW</div>
+          <div class="logo-text-block">
+            <span class="main-title"><span class="highlight">H</span>E<span class="highlight">R</span>ITAG<span class="highlight">E</span></span>
+            <span class="sub-title">WALLPAPER & CARPET</span>
+          </div>
+        </div>
       </a>
+
       <form class="search" id="searchForm">
-        <input id="searchInput" type="search" placeholder="Search wallpaper, carpet, room, colour..." />
+        <input id="searchInput" type="search" placeholder="Search wallpaper, luxury carpet, finishes..." />
         <button type="submit" aria-label="Search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.8 18.1a7.3 7.3 0 1 1 0-14.6 7.3 7.3 0 0 1 0 14.6Zm0-2a5.3 5.3 0 1 0 0-10.6 5.3 5.3 0 0 0 0 10.6Zm5.3.4 4.1 4.1-1.5 1.4-4-4.1 1.4-1.4Z"/></svg>
         </button>
       </form>
       <div class="header-actions">
-        <a href="tel:+917977576575" class="header-link">Call</a>
+        <a href="tel:+917977576575" class="header-link">Call Lounge</a>
         <button class="basket-btn" id="basketBtn" type="button">
           Basket <span id="cartCount">0</span>
         </button>
       </div>
     </div>
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-      <a href="#shop">Wallpaper</a>
-      <a href="#shop" data-nav-filter="carpet">Carpets</a>
-      <a href="#shop" data-nav-filter="flooring">Flooring</a>
-      <a href="#brands">Brands</a>
+      <a href="#shop">Wallpaper Designs</a>
+      <a href="#shop" data-nav-filter="carpet">Luxury Carpets</a>
+      <a href="#shop" data-nav-filter="flooring">Premium Flooring</a>
+      <a href="#brands">Collections</a>
       <a href="#samples">Samples</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#gallery">Gallery Lookbook</a>
       <a href="#checkoutGuide">Payments</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -124,11 +119,12 @@
   <main id="home">
     <section class="hero">
       <div class="hero-copy">
-        <h1>Transform your space with premium wallpapers & luxury carpets.</h1>
-        <p>Explore our exclusive collections designed for beautiful Indian homes. Browse designs, order samples, and elevate your interiors with a flawless finish.</p>
+        <div class="crest-divider"><span>⚜️</span></div>
+        <h1>Transform your space with elite wallpapers & premium carpets.</h1>
+        <p>Explore our exclusive collections crafted for magnificent Indian interiors. Browse architectural layouts, order luxury swatches, and elevate your space with flawless execution.</p>
         <div class="hero-actions">
-          <a href="#shop" class="btn primary">Shop collection</a>
-          <a href="#samples" class="btn secondary">Order samples</a>
+          <a href="#shop" class="btn primary">Explore Collections</a>
+          <a href="#samples" class="btn secondary">Order Swatches</a>
         </div>
       </div>
       <div class="hero-studio" aria-label="Wallpaper product preview">
@@ -136,59 +132,59 @@
         <div class="roll roll-b"></div>
         <div class="roll roll-c"></div>
         <div class="studio-card">
-          <strong>New arrivals</strong>
-          <span>Botanicals, geometrics, kids rooms and commercial textures</span>
+          <strong>Elite New Arrivals</strong>
+          <span>Exquisite Metallics, Premium Geometrics, & Architectural Textures</span>
         </div>
       </div>
     </section>
 
     <section class="promo-band" aria-label="Promotions">
       <article>
-        <span>Launch offer</span>
-        <strong>Up to 35% off selected wallpapers</strong>
-        <a href="#shop" data-quick-filter="sale">View offers</a>
+        <span>Curated Privilege</span>
+        <strong>Up to 35% off selected architectural roll series</strong>
+        <a href="#shop" data-quick-filter="sale">View Privileges</a>
       </article>
       <article>
-        <span>Samples</span>
-        <strong>Try colours and texture before you commit</strong>
-        <a href="#samples">Order samples</a>
+        <span>Texture Swatches</span>
+        <strong>Examine textures & structural weight under custom room lights</strong>
+        <a href="#samples">Order Samples</a>
       </article>
       <article>
-        <span>Installation</span>
-        <strong>Measurement and fitting available across MMR</strong>
-        <a href="#contact">Book visit</a>
+        <span>White Glove Setup</span>
+        <strong>Laser-accurate site measurement and elite installation across MMR</strong>
+        <a href="#contact">Schedule White Glove Visit</a>
       </article>
     </section>
 
     <section class="catalog-shell" id="shop">
       <aside class="filters" aria-label="Product filters">
         <div>
-          <h2>Shop by category</h2>
-          <button class="filter-btn active" data-filter="all">All products</button>
-          <button class="filter-btn" data-filter="wallpaper">Wallpaper</button>
-          <button class="filter-btn" data-filter="carpet">Carpet</button>
-          <button class="filter-btn" data-filter="flooring">Flooring</button>
-          <button class="filter-btn" data-filter="panel">Wall panels</button>
-          <button class="filter-btn" data-filter="sale">Offers</button>
+          <h2>Product Portfolios</h2>
+          <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+          <button class="filter-btn" data-filter="wallpaper">Designer Wallpaper</button>
+          <button class="filter-btn" data-filter="carpet">Luxury Carpet</button>
+          <button class="filter-btn" data-filter="flooring">Engineered Flooring</button>
+          <button class="filter-btn" data-filter="panel">Acoustic Panels</button>
+          <button class="filter-btn" data-filter="sale">Seasonal Offers</button>
         </div>
         <div class="filter-box">
-          <h3>Popular rooms</h3>
-          <button class="room-chip" data-room="living">Living room</button>
-          <button class="room-chip" data-room="bedroom">Bedroom</button>
-          <button class="room-chip" data-room="kids">Kids room</button>
-          <button class="room-chip" data-room="office">Office</button>
-          <button class="room-chip" data-room="hotel">Hotel</button>
+          <h3>Inspiration Spaces</h3>
+          <button class="room-chip" data-room="living">Grand Living Area</button>
+          <button class="room-chip" data-room="bedroom">Master Bedroom Suite</button>
+          <button class="room-chip" data-room="kids">Junior Haven</button>
+          <button class="room-chip" data-room="office">Executive Lounge</button>
+          <button class="room-chip" data-room="hotel">Luxury Hospitality</button>
         </div>
         <div class="delivery-note">
-          <strong>Need help measuring?</strong>
-          <p>Share wall size on WhatsApp and we will calculate rolls, waste margin and installation cost.</p>
+          <strong>Bespoke Calculations?</strong>
+          <p>Transmit your raw layout dimensions directly to our design assistants over WhatsApp. We calculate dynamic waste margins and surface preparation profiles.</p>
         </div>
       </aside>
 
       <section class="catalog">
         <div class="section-head compact">
-          <span id="resultCount">Featured products</span>
-          <h2>Wallcoverings and surfaces with clear pricing</h2>
+          <span id="resultCount">Featured Portfolios</span>
+          <h2>Exclusive architectural finishes & materials</h2>
         </div>
         <div class="product-grid" id="productGrid"></div>
       </section>
@@ -196,16 +192,16 @@
 
     <section class="brands" id="brands">
       <div class="section-head">
-        <span>Browse by finish</span>
-        <h2>Collections arranged like a design library.</h2>
+        <span>Sort by Design Language</span>
+        <h2>Collections cataloged like an international design atelier.</h2>
       </div>
       <div class="brand-rail">
-        <button data-finish="Botanical">Botanical Prints</button>
-        <button data-finish="Geometric">Modern Geometrics</button>
-        <button data-finish="Textured">Textured Vinyl</button>
-        <button data-finish="Luxury">Luxury Metallics</button>
-        <button data-finish="Kids">Kids & Nursery</button>
-        <button data-finish="Commercial">Commercial Grade</button>
+        <button data-finish="Botanical">Botanical Murals</button>
+        <button data-finish="Geometric">Bespoke Geometrics</button>
+        <button data-finish="Textured">Heavily Textured Vinyl</button>
+        <button data-finish="Luxury">Reflective Metallics</button>
+        <button data-finish="Kids">Whimsical Kids Prints</button>
+        <button data-finish="Commercial">High-Traffic Contract</button>
       </div>
     </section>
 
@@ -217,39 +213,39 @@
       </div>
       <div>
         <div class="section-head left">
-          <span>Samples first</span>
-          <h2>Check colour, scale and texture in your room light.</h2>
+          <span>Swatches First</span>
+          <h2>Evaluate high-end structural grains in your residential space.</h2>
         </div>
-        <p>Every wallpaper product has an Add sample option. Samples are priced from Rs 99 and can be picked up from the store or couriered after confirmation.</p>
-        <a href="#shop" class="btn primary">Choose samples</a>
+        <p>Every premium surface variant supports sample selections. Swatches start at Rs 99 and are expedited with luxury courier options or layout-lounge handovers.</p>
+        <a href="#shop" class="btn primary">Select Masterpiece Swatches</a>
       </div>
     </section>
 
     <section class="rooms" id="rooms">
       <div class="section-head">
-        <span>Room inspiration</span>
-        <h2>Fast starting points for every project.</h2>
+        <span>Curated Moodboards</span>
+        <h2>Architectural blueprints for sophisticated projects.</h2>
       </div>
       <div class="room-grid">
         <article class="room-card living">
-          <strong>Living room statement walls</strong>
-          <span>Large repeats, textured vinyl and warm neutrals</span>
+          <strong>State Room Accent Wallpapers</strong>
+          <span>Oversized repeats, dynamic texture, and deep rich tones</span>
         </article>
         <article class="room-card bedroom">
-          <strong>Calm bedrooms</strong>
-          <span>Soft florals, linen textures and quiet stripes</span>
+          <strong>Serene Luxury Retreats</strong>
+          <span>Muted silks, micro-stripes, and calming floral reliefs</span>
         </article>
         <article class="room-card office">
-          <strong>Commercial spaces</strong>
-          <span>Durable wallcoverings, carpets and acoustic panels</span>
+          <strong>High-End Corporate Lounges</strong>
+          <span>Acoustic wall configurations, heavy contract carpet grids</span>
         </article>
       </div>
     </section>
 
     <section class="gallery" id="gallery">
       <div class="section-head">
-        <span>Our Work</span>
-        <h2>Instagram Gallery</h2>
+        <span>Design Lookbook</span>
+        <h2>Actual Showroom Gallery</h2>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=800&auto=format&fit=crop" alt="Premium Wallpaper Installation" loading="lazy"></div>
@@ -257,36 +253,39 @@
         <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Premium Carpet" loading="lazy"></div>
         <div class="gallery-item"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" alt="Wall Paneling Design" loading="lazy"></div>
       </div>
-      <p style="margin-top: 1.5rem; text-align: center;"><a href="https://www.instagram.com/heritage_wallpaper_and_carpet?igsh=Y3hsOTVmNDRjc2s4" target="_blank" rel="noopener" class="btn secondary">View more on Instagram</a></p>
+      <p style="margin-top: 2rem; text-align: center;">
+        <a href="https://www.google.com/maps/place/Heritage+Wallpaper+and+Carpet/@19.2294997,73.1626562,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhDmrGQHYiNbrMMZ34ZV53K1!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAPNQkAF88rShmV3ejYjSzN5YQqm-UdN57vGR2Y2ACROaYRvYPu4EUhYU3s-PFo6t18JeIVek-W8eTIFOms8hVjOPjAfbB3rSDIuALYf0vapPHFV6wz0ZH9RmHFo-uCpJefL3UdzKOytx5aCZOjxo%3Dw662-h298-k-no!7i1280!8i576!4m9!3m8!1s0x3be795f198ab3999:0x2beccb896e361756!8m2!3d19.2294997!4d73.1626562!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11mhf_81yk?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn primary">View Full Showroom Photos</a>
+        <a href="https://www.instagram.com/heritage_wallpaper_and_carpet?igsh=Y3hsOTVmNDRjc2s4" target="_blank" rel="noopener" class="btn secondary">Follow Atelier Instagram</a>
+      </p>
     </section>
 
     <section class="checkout-guide" id="checkoutGuide">
       <div class="section-head left">
-        <span>Checkout and payments</span>
-        <h2>Cart, customer details and secure payment handoff are built in.</h2>
+        <span>Reservation & Delivery</span>
+        <h2>Seamless procurement and bespoke payment handshakes.</h2>
       </div>
       <div class="steps">
-        <article><strong>1</strong><span>Add rolls, samples, carpet or flooring to basket.</span></article>
-        <article><strong>2</strong><span>Enter phone, delivery area and preferred payment option.</span></article>
-        <article><strong>3</strong><span>Send the order to Heritage for stock confirmation and a secure payment link.</span></article>
+        <article><strong>1</strong><span>Accumulate designer rolls, bespoke carpets, or wood lots in your design basket.</span></article>
+        <article><strong>2</strong><span>Specify verified contact tokens, geographic target coordinates, and preference metrics.</span></article>
+        <article><strong>3</strong><span>Transmit order profile directly to our studio dispatch for absolute configuration approval.</span></article>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div>
         <div class="section-head left">
-          <span>Visit or WhatsApp</span>
+          <span>Visit Our Exhibition Lounge</span>
           <h2>Heritage Wallpaper & Carpet, Ulhasnagar.</h2>
         </div>
         <p>Opposite Navjeevan Bank, Near Mayur Hotel, Camp No. 3, Ulhasnagar, Maharashtra 421002</p>
-        <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; height: 250px; max-width: 100%;">
+        <div style="margin-top: 1.5rem; border-radius: 12px; overflow: hidden; height: 300px; max-width: 100%; box-shadow: var(--shadow);">
           <iframe src="https://maps.google.com/maps?q=Opposite%20Navjeevan%20Bank,%20Near%20Mayur%20Hotel,%20Camp%20No.%203,%20Ulhasnagar&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <div class="contact-actions">
-        <a class="btn primary" href="https://wa.me/917977576575?text=Hi%2C%20I%20want%20help%20with%20wallpaper%20shopping" target="_blank" rel="noopener">WhatsApp store</a>
-        <a class="btn secondary" href="tel:+917977576575">Call +91 79775 76575</a>
-        <a class="btn secondary" href="https://maps.app.goo.gl/Xsj4nnHRGGW5r8hw9" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn primary" href="https://wa.me/917977576575?text=Hi%2C%20I%20am%20inquiring%20about%20your%20premium%20wallpaper%20and%20flooring%20portfolio." target="_blank" rel="noopener">Connect with Design Assistant</a>
+        <a class="btn secondary" href="tel:+917977576575">Call Main Office</a>
+        <a class="btn secondary" href="https://maps.app.goo.gl/Xsj4nnHRGGW5r8hw9" target="_blank" rel="noopener">Obtain Route Blueprint</a>
       </div>
     </section>
   </main>
@@ -294,39 +293,39 @@
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="cart-panel">
       <div class="cart-head">
-        <h2>Your basket</h2>
-        <button class="icon-btn" id="closeCart" type="button" aria-label="Close basket">x</button>
+        <h2>Your Design Selection</h2>
+        <button class="icon-btn" id="closeCart" type="button" aria-label="Close basket">×</button>
       </div>
       <div class="cart-items" id="cartItems"></div>
-      <div class="cart-empty" id="cartEmpty">Your basket is empty.</div>
+      <div class="cart-empty" id="cartEmpty">No premium materials selected yet.</div>
       <div class="cart-total">
-        <span>Estimated total</span>
+        <span>Estimated Investment</span>
         <strong id="cartTotal">Rs 0</strong>
       </div>
-      <button class="btn primary full" id="checkoutBtn" type="button">Checkout</button>
+      <button class="btn primary full" id="checkoutBtn" type="button">Initiate Vault Verification</button>
     </div>
   </aside>
 
   <div class="modal" id="checkoutModal" aria-hidden="true">
     <form class="checkout" id="checkoutForm">
       <div class="cart-head">
-        <h2>Checkout</h2>
-        <button class="icon-btn" id="closeCheckout" type="button" aria-label="Close checkout">x</button>
+        <h2>Procurement Details</h2>
+        <button class="icon-btn" id="closeCheckout" type="button" aria-label="Close checkout">×</button>
       </div>
       <label>
-        Full name
+        Full Client Designation
         <input id="customerName" type="text" required />
       </label>
       <label>
-        Phone number
+        Secure Contact Number
         <input id="customerPhone" type="tel" required />
       </label>
       <label>
-        Delivery / installation area
-        <input id="customerArea" type="text" placeholder="Ulhasnagar, Kalyan, Thane..." required />
+        Installation Site Target Zone
+        <input id="customerArea" type="text" placeholder="Ulhasnagar, Kalyan, Juhu, South Mumbai..." required />
       </label>
       <label>
-        Payment preference
+        Settlement Architecture Protocol
         <select id="paymentMethod">
           <option>Secure online payment link</option>
           <option>UPI after stock confirmation</option>
@@ -335,44 +334,47 @@
         </select>
       </label>
       <div class="checkout-summary" id="checkoutSummary"></div>
-      <a id="upiPayBtn" class="btn secondary full" style="margin-bottom: 1rem; display: none; text-align: center; text-decoration: none;" href="#">Pay via UPI</a>
-      <button class="btn primary full" type="submit">Send order and request payment link</button>
+      <a id="upiPayBtn" class="btn secondary full" style="margin-bottom: 1rem; display: none; text-align: center; text-decoration: none;" href="#">Settle via UPI Ecosystem</a>
+      <button class="btn primary full" type="submit">Submit Request to Material Dispatch</button>
     </form>
   </div>
 
   <footer class="footer">
     <div class="footer-grid">
       <div>
-        <a href="#home" class="brand footer-brand">
-          <span class="brand-mark">H</span>
-          <span><strong>Heritage</strong><small>Wallpaper & Carpet</small></span>
-        </a>
-        <p>Wallpaper, carpet, flooring, panels, measurement and fitting across Ulhasnagar, Kalyan, Dombivli, Thane and Mumbai.</p>
+        <div class="logo-wrapper inverted">
+          <div class="card-monogram">HW</div>
+          <div class="logo-text-block">
+            <span class="main-title"><span class="highlight">H</span>E<span class="highlight">R</span>ITAG<span class="highlight">E</span></span>
+            <span class="sub-title">WALLPAPER & CARPET</span>
+          </div>
+        </div>
+        <p style="margin-top: 1.5rem;">Bespoke textures, architectural wall systems, structured contract tiles, premium vinyl panels, and white-glove deployments across MMR.</p>
       </div>
       <div>
-        <h3>Shop</h3>
-        <a href="#shop">Wallpaper</a>
-        <a href="#shop">Carpets</a>
-        <a href="#shop">Flooring</a>
-        <a href="#gallery">Gallery</a>
+        <h3>Material Divisions</h3>
+        <a href="#shop">Designer Rollware</a>
+        <a href="#shop">Luxury Broadloom Carpets</a>
+        <a href="#shop">Hardwood & Rigid Flooring</a>
+        <a href="#gallery">Visual Lookbook</a>
       </div>
       <div>
-        <h3>Support</h3>
-        <a href="#samples">Samples</a>
-        <a href="#checkoutGuide">Payments</a>
-        <a href="#contact">Contact</a>
+        <h3>Client Services</h3>
+        <a href="#samples">Texture Swatches</a>
+        <a href="#checkoutGuide">Procurement Steps</a>
+        <a href="#contact">Lounge Location</a>
       </div>
       <div>
-        <h3>Store</h3>
-        <a href="tel:+917977576575">+91 79775 76575</a>
-        <a href="https://wa.me/917977576575" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://maps.app.goo.gl/Xsj4nnHRGGW5r8hw9" target="_blank" rel="noopener">Get Directions</a>
+        <h3>Atelier Directories</h3>
+        <a href="tel:+917977576575">Direct Desk: +91 79775 76575</a>
+        <a href="mailto:heritagewallpaper01@gmail.com">heritagewallpaper01@gmail.com</a>
+        <a href="https://wa.me/917977576575" target="_blank" rel="noopener">WhatsApp Design Desk</a>
         <a href="https://www.instagram.com/heritage_wallpaper_and_carpet?igsh=Y3hsOTVmNDRjc2s4" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-    <p class="copyright">Copyright 2026 Heritage Wallpaper & Carpet. All rights reserved.</p>
+    <p class="copyright">© 2026 Heritage Wallpaper & Carpet Workshop. Engineered with absolute prestige.</p>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -1,45 +1,25 @@
 # Heritage Wallpaper & Carpet — Website Package
 
 ## Files Included
-- `index.html` — Complete website (single page, all sections)
-- `styles.css` — Full responsive stylesheet
-- `script.js` — Interactivity, sliders, form handling
+- `index.html` — Complete website (single page, all premium modified sections)
+- `styles.css` — Full responsive luxury stylesheet with Maroon & Copper variables
+- `script.js` — Interactivity, basket management, UPI handling, and premium lookups
+- `CNAME` — Production structural routing file
 
 ## How to Use
 
 ### Option 1: Open Locally
-Double-click `index.html` to open in your browser. Everything works offline except the Google Map embed.
+Double-click `index.html` to open in your browser. Everything works offline except map structures and live gateway links.
 
 ### Option 2: Upload to Hosting
-Upload all 3 files to your web hosting (Hostinger, Bluehost, GoDaddy, etc.) into the `public_html` or `www` folder.
+Upload `index.html`, `styles.css`, `script.js`, and `CNAME` directly into your server root directory (`public_html` or `www`).
 
-### Option 3: Use Free Hosting
-- **Netlify**: Drag the folder to netlify.com/drop — live in seconds
-- **Vercel**: Connect GitHub and deploy
-- **GitHub Pages**: Push to a repo, enable Pages
+### Option 3: Free Platform Hosting
+- **Netlify**: Drop the complete folder onto netlify.com/drop
+- **GitHub Pages**: Create your repository, add the files, and toggle GitHub Pages activation via settings.
 
-## Customization Checklist
-- [x] Replace placeholder Google Map iframe with your actual embed
-- [ ] Add real product/gallery photos (replace CSS gradient placeholders in `.gi-1` through `.gi-8`)
-- [ ] Update business hours if different
-- [x] Add Instagram link in footer social icons
-- [ ] Add Facebook link in footer social icons
-- [x] Replace placeholder `upiId` in `script.js` with your actual UPI ID (for GPay/PhonePe payments)
-- [ ] Download your 4 best photos from Instagram, save them in the folder, and replace the Unsplash links in the `<section id="gallery">` inside `index.html`.
-- [ ] Set up Google Analytics (add GA4 tag to `<head>`)
-- [ ] Set up Google Search Console and submit sitemap
-
-## SEO Setup
-1. Register domain: `heritagewallpaper.in` or `heritagewallpapercarpet.com`
-2. Submit to Google Search Console
-3. Create Google Business Profile (if not done): maps.google.com/business
-4. The schema markup in `<head>` helps with rich snippets
-
-## WhatsApp Integration
-All CTAs are pre-configured with WhatsApp deep links to: +91 79775 76575
-Form submissions auto-compose a formatted WhatsApp message.
-
-## Contact
-Heritage Wallpaper & Carpet
-+91 79775 76575
-Opposite Navjeevan Bank, Near Mayur Hotel, Camp No. 3, Ulhasnagar, MH 421002
+## Optimization Assets Checklist
+- [x] Implemented luxury inline vector identity mirroring physical business cards.
+- [x] Swapped out old default green palette with Deep Maroon, Copper Gold, and card gradients.
+- [x] Connected all map references to your Ulhasnagar lookbook variables.
+- [x] Hardcoded custom backend script references to point seamlessly to your workspace links.
