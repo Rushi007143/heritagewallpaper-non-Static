@@ -1,4 +1,6 @@
 const phoneNumber = "917977576575";
+const upiId = "yourbusiness@upi"; // IMPORTANT: Replace this with your actual UPI ID
+const payeeName = "Heritage Wallpaper and Carpet";
 const cart = [];
 
 const products = [
@@ -272,6 +274,17 @@ function renderCart() {
   checkoutSummary.innerHTML = cart.length
     ? cart.map((item) => `${item.qty} x ${item.name} - ${formatMoney(item.price * item.qty)}`).join("<br>") + `<br><strong>Total: ${formatMoney(cartSum())}</strong>`
     : "No products selected.";
+
+  const upiPayBtn = document.getElementById("upiPayBtn");
+  if (upiPayBtn) {
+    if (cart.length > 0) {
+      upiPayBtn.style.display = "block";
+      upiPayBtn.href = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(payeeName)}&am=${cartSum().toFixed(2)}&cu=INR`;
+      upiPayBtn.textContent = `Pay ${formatMoney(cartSum())} via UPI (GPay, PhonePe, Paytm)`;
+    } else {
+      upiPayBtn.style.display = "none";
+    }
+  }
 }
 
 function openCart() {
