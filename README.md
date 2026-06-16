@@ -25,6 +25,7 @@ Upload all 3 files to your web hosting (Hostinger, Bluehost, GoDaddy, etc.) into
 - [x] Add Instagram link in footer social icons
 - [ ] Add Facebook link in footer social icons
 - [x] Replace placeholder `upiId` in `script.js` with your actual UPI ID (for GPay/PhonePe payments)
+- [ ] Download your 4 best photos from Instagram, save them in the folder, and replace the Unsplash links in the `<section id="gallery">` inside `index.html`.
 - [ ] Set up Google Analytics (add GA4 tag to `<head>`)
 - [ ] Set up Google Search Console and submit sitemap
 
