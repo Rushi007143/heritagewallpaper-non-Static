@@ -12,4 +12,19 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    plugins: [
+      // We pass a nested config block to override Lovable's default Cloudflare target 
+      {
+        name: "override-nitro-preset",
+        configResolved(config) {
+          const nitroPlugin = config.plugins.find(p => p.name === "nitro");
+          if (nitroPlugin && process.env.VERCEL) {
+            // Forces the built-in Lovable Nitro wrapper to compile Vercel functions
+            process.env.NITRO_PRESET = "vercel"; 
+          }
+        },
+      },
+    ],
+  },
 });
