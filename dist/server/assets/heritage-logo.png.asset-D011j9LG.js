@@ -1,0 +1,13 @@
+var heritage_logo_png_asset_default = {
+	version: 1,
+	asset_id: "88d48888-7678-4dbd-85aa-5c0a95783f44",
+	project_id: "eefc27d6-ac63-4a8d-9590-1a39163a0a9c",
+	url: "/__l5e/assets-v1/88d48888-7678-4dbd-85aa-5c0a95783f44/heritage-logo.png",
+	r2_key: "a/v1/eefc27d6-ac63-4a8d-9590-1a39163a0a9c/88d48888-7678-4dbd-85aa-5c0a95783f44/heritage-logo.png",
+	original_filename: "heritage-logo.png",
+	size: 2256371,
+	content_type: "image/png",
+	created_at: "2026-06-16T15:50:33Z"
+};
+//#endregion
+export { heritage_logo_png_asset_default as t };
