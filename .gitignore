@@ -1,4 +1,6 @@
 node_modules/
 dist/
 .tanstack/
-.vercel/
+.env
+.env.local
+.vercel
